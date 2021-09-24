@@ -1,0 +1,22 @@
+﻿<Application x:Class="RequestsOfDepartments.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RequestsOfDepartments"
+			 xmlns:views="clr-namespace:RequestsOfDepartments.Views"
+			 xmlns:viewmodels="clr-namespace:RequestsOfDepartments.ViewModels"
+             StartupUri="MainWindow.xaml">
+	<Application.Resources>
+		<DataTemplate DataType="{x:Type viewmodels:OGMehRequestsViewModel}">
+			<views:OGMehRequestsUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:BPURequestsViewModel}">
+			<views:BPURequestsUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:ETsRequestsViewModel}">
+			<views:ETsRequestsUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:KBSTRequestsViewModel}">
+			<views:KBSTRequestsUserControl/>
+		</DataTemplate>
+	</Application.Resources>
+</Application>
