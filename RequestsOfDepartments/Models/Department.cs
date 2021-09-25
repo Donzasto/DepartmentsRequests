@@ -1,10 +1,8 @@
-﻿using RequestsOfDepartments.ViewModels;
-
-namespace RequestsOfDepartments.Models
+﻿namespace DepartmentsRequests.Models
 {
-    public class Departments
+    public class Department
     {
         public string ShortName { get; set; }
-        public BaseRequestsViewModel RequestsViewModel { get; set; }
+        public string Description { get; set; }
     }
 }

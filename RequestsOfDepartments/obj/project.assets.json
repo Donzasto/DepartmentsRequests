@@ -5707,9 +5707,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\RequestsOfDepartments.csproj",
-      "projectName": "RequestsOfDepartments",
-      "projectPath": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\RequestsOfDepartments.csproj",
+      "projectUniqueName": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\DepartmentsRequests.csproj",
+      "projectName": "DepartmentsRequests",
+      "projectPath": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\DepartmentsRequests.csproj",
       "packagesPath": "C:\\Users\\Main\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\obj\\",
       "projectStyle": "PackageReference",

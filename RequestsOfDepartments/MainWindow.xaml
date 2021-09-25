@@ -1,11 +1,11 @@
-﻿<Window x:Class="RequestsOfDepartments.MainWindow"
+﻿<Window x:Class="DepartmentsRequests.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RequestsOfDepartments.ViewModels"
+        xmlns:local="clr-namespace:DepartmentsRequests.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding SelectedViewModel.Title}" Height="450" Width="800" WindowStartupLocation="CenterScreen">
 
 	<Window.DataContext>
 		<local:MainWindowViewModel />
@@ -23,7 +23,7 @@
 		<ContentControl Grid.ColumnSpan="1" Grid.RowSpan="1" Content="{Binding SelectedViewModel}"/>
 
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" MinWidth="100" Grid.Row="1">
-			<ComboBox Margin="10,0,10,0" Width="100" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" ItemsSource="{Binding Departments}" SelectedValue="{Binding SelectedViewModel}" SelectedValuePath="RequestsViewModel" DisplayMemberPath="ShortName"/>
+			<ComboBox Margin="10,0,10,0" Width="100" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" ItemsSource="{Binding Departments}" SelectedValue="{Binding SelectedDepartment}"/>
 			<Button Margin="10,5,10,5" Width="100" FontWeight="Bold" FontSize="14">ОБНОВИТЬ</Button>
 		</StackPanel>
 	</Grid>

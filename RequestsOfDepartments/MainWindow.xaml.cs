@@ -1,7 +1,6 @@
-﻿using RequestsOfDepartments.Models;
-using System.Windows;
+﻿using System.Windows;
 
-namespace RequestsOfDepartments
+namespace DepartmentsRequests
 {
     public partial class MainWindow : Window
     {

@@ -1,22 +1,22 @@
-﻿<Application x:Class="RequestsOfDepartments.App"
+﻿<Application x:Class="DepartmentsRequests.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:RequestsOfDepartments"
-			 xmlns:views="clr-namespace:RequestsOfDepartments.Views"
-			 xmlns:viewmodels="clr-namespace:RequestsOfDepartments.ViewModels"
+             xmlns:local="clr-namespace:DepartmentsRequests"
+			 xmlns:views="clr-namespace:DepartmentsRequests.Views"
+			 xmlns:viewmodels="clr-namespace:DepartmentsRequests.ViewModels"
              StartupUri="MainWindow.xaml">
 	<Application.Resources>
-		<DataTemplate DataType="{x:Type viewmodels:OGMehRequestsViewModel}">
-			<views:OGMehRequestsUserControl/>
+		<DataTemplate DataType="{x:Type viewmodels:OGMehViewModel}">
+			<views:OGMehUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:BPURequestsViewModel}">
-			<views:BPURequestsUserControl/>
+		<DataTemplate DataType="{x:Type viewmodels:BPUViewModel}">
+			<views:BPUUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:ETsRequestsViewModel}">
-			<views:ETsRequestsUserControl/>
+		<DataTemplate DataType="{x:Type viewmodels:ETsViewModel}">
+			<views:ETsUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:KBSTRequestsViewModel}">
-			<views:KBSTRequestsUserControl/>
+		<DataTemplate DataType="{x:Type viewmodels:KBSTViewModel}">
+			<views:KBSTUserControl/>
 		</DataTemplate>
 	</Application.Resources>
 </Application>

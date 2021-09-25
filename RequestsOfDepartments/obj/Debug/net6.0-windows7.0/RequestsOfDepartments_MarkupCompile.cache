@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Main\Desktop\RequestsOfDepartments\RequestsOfDepartments\App.xaml
-51745504608
+5252303321
 
-18-1338828406
+181325518778
 215-1114060190
-MainWindow.xaml;Views\BPURequestsUserControl.xaml;Views\ETsRequestsUserControl.xaml;Views\KBSTRequestsUserControl.xaml;Views\OGMehRequestsUserControl.xaml;
+MainWindow.xaml;Views\BPUUserControl.xaml;Views\ETsUserControl.xaml;Views\KBSTUserControl.xaml;Views\OGMehUserControl.xaml;
 
 False
 

@@ -1,35 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Diagnostics;
-using RequestsOfDepartments.Models;
+﻿using System.Collections.Generic;
 
-namespace RequestsOfDepartments.ViewModels
+namespace DepartmentsRequests.ViewModels
 {
-    public class MainWindowViewModel : BaseRequestsViewModel
+    public class MainWindowViewModel : BaseViewModel
     {
-        private BaseRequestsViewModel _selectedDepartment;
+        private BaseViewModel _selectedViewModel;
+        private string _department;
 
         public MainWindowViewModel()
         {
-            Departments = new ObservableCollection<Departments>()
+            Departments = new List<string>()
             {
-                new Departments() { ShortName = "ОГМех", RequestsViewModel = new OGMehRequestsViewModel() },
-                new Departments() { ShortName = "БПУ", RequestsViewModel = new BPURequestsViewModel() },
-                new Departments() { ShortName = "ЭЦ", RequestsViewModel = new ETsRequestsViewModel() },
-                new Departments() { ShortName = "КБСТ", RequestsViewModel = new KBSTRequestsViewModel() }
+                "ОГМех",
+                "БПУ",
+                "ЭЦ",
+                "КБСТ"
             };
         }
 
-        public ObservableCollection<Departments> Departments { get; }
+        public List<string> Departments { get; }
 
-        public BaseRequestsViewModel SelectedViewModel
+        public string SelectedDepartment
         {
-            get { return _selectedDepartment; }
+            get => _department;
             set
             {
-                _selectedDepartment = value;
+                _department = value;
+
+                if (_department == "ОГМех")
+                {
+                    SelectedViewModel = new OGMehViewModel("Заявки на ремонт оборудования");
+                }
+                else if (_department == "БПУ")
+                {
+                    SelectedViewModel = new BPUViewModel("Заявки на управлющие программы");
+                }
+                else if (_department == "ЭЦ")
+                {
+                    SelectedViewModel = new ETsViewModel("Заявки на обслуживание энергосистем");
+                }
+                else if (_department == "КБСТ")
+                {
+                    SelectedViewModel = new KBSTViewModel("Заявки на 3D модели");
+                }
+            }
+        }
+
+        public BaseViewModel SelectedViewModel
+        {
+            get => _selectedViewModel;
+            set
+            {
+                _selectedViewModel = value;
                 OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
