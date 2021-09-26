@@ -23,7 +23,7 @@
 		<ContentControl Grid.ColumnSpan="1" Grid.RowSpan="1" Content="{Binding SelectedViewModel}"/>
 
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" MinWidth="100" Grid.Row="1">
-			<ComboBox Margin="10,0,10,0" Width="100" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" ItemsSource="{Binding Departments}" SelectedValue="{Binding SelectedDepartment}"/>
+			<ComboBox Margin="10,0,10,0" Width="100" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" ItemsSource="{Binding ViewModelsList}" SelectedValue="{Binding SelectedViewModel}" DisplayMemberPath="ShortName"/>
 			<Button Margin="10,5,10,5" Width="100" FontWeight="Bold" FontSize="14">ОБНОВИТЬ</Button>
 		</StackPanel>
 	</Grid>

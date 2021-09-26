@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-		<DataGrid  AutoGenerateColumns="False">
+		<DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding BPURequestsDataGrid}">
 			<DataGrid.Columns>
 				<DataGridTextColumn Binding="{Binding Id}" Header="№"></DataGridTextColumn>
 				<DataGridTextColumn Binding="{Binding DecNum}" Header="Децимальный номер"></DataGridTextColumn>

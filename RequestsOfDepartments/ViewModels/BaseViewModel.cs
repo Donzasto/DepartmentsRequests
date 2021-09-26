@@ -4,17 +4,9 @@ namespace DepartmentsRequests.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public BaseViewModel()
-        {
-
-        }
-
-        public BaseViewModel(string title)
-        {
-            Title = title;
-        }
-
         public string Title { get; set; }
+
+        public string ShortName { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

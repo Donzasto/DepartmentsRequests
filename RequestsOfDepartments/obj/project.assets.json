@@ -5707,11 +5707,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\DepartmentsRequests.csproj",
+      "projectUniqueName": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
       "projectName": "DepartmentsRequests",
-      "projectPath": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\DepartmentsRequests.csproj",
+      "projectPath": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
       "packagesPath": "C:\\Users\\Main\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Main\\Desktop\\RequestsOfDepartments\\RequestsOfDepartments\\obj\\",
+      "outputPath": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Main\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,51 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using DepartmentsRequests.DAL;
+using System.Collections.Generic;
 
 namespace DepartmentsRequests.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
         private BaseViewModel _selectedViewModel;
-        private string _department;
+
+        public List<BaseViewModel> ViewModelsList { get; }
 
         public MainWindowViewModel()
         {
-            Departments = new List<string>()
+            using DepartmentsRequestsContext db = new();
+
+            ViewModelsList = new List<BaseViewModel>()
             {
-                "ОГМех",
-                "БПУ",
-                "ЭЦ",
-                "КБСТ"
+                new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования", OGMehRequestsDataGrid = db.OGMehRequestsList },
+                new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы", BPURequestsDataGrid = db.BPURequestsList },
+                new ETsViewModel(){ ShortName = "ЭЦ", Title = "Заявки на обслуживание энергосистем" },
+                new KBSTViewModel(){ ShortName = "КБСТ", Title = "Заявки на 3D модели" }
             };
         }
-
-        public List<string> Departments { get; }
-
-        public string SelectedDepartment
-        {
-            get => _department;
-            set
-            {
-                _department = value;
-
-                if (_department == "ОГМех")
-                {
-                    SelectedViewModel = new OGMehViewModel("Заявки на ремонт оборудования");
-                }
-                else if (_department == "БПУ")
-                {
-                    SelectedViewModel = new BPUViewModel("Заявки на управлющие программы");
-                }
-                else if (_department == "ЭЦ")
-                {
-                    SelectedViewModel = new ETsViewModel("Заявки на обслуживание энергосистем");
-                }
-                else if (_department == "КБСТ")
-                {
-                    SelectedViewModel = new KBSTViewModel("Заявки на 3D модели");
-                }
-            }
-        }
-
         public BaseViewModel SelectedViewModel
         {
             get => _selectedViewModel;
