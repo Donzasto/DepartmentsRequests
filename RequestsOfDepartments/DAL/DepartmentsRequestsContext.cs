@@ -16,8 +16,14 @@ namespace DepartmentsRequests.DAL
 
         public DbSet<BPURequestModel> RequestsBPU { get; set; }
 
-     //   public List<OGMehRequestModel> OGMehRequestsList => RequestsOGMeh.OrderByDescending(o => o.Id).ToList();
+    //    public List<OGMehRequestModel> OGMehRequestsList => RequestsOGMeh.OrderByDescending(o => o.Id).ToList();
+        public List<OGMehRequestModel> OGMehOpenRequestsList => new List<OGMehRequestModel>()
+        {
+            new OGMehRequestModel(){Id = 2}
+        };
+        public List<OGMehRequestModel> OGMehRequestsList => new List<OGMehRequestModel>();
 
      //   public List<BPURequestModel> BPURequestsList => RequestsBPU.OrderByDescending(o => o.Id).ToList();
+        public List<BPURequestModel> BPURequestsList => new List<BPURequestModel>();
     }
 }

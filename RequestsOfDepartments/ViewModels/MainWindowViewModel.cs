@@ -1,5 +1,7 @@
-﻿using DepartmentsRequests.DAL;
+﻿using DepartmentsRequests.Commands;
+using DepartmentsRequests.DAL;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace DepartmentsRequests.ViewModels
 {
@@ -20,7 +22,10 @@ namespace DepartmentsRequests.ViewModels
                 new ETsViewModel(){ ShortName = "ЭЦ", Title = "Заявки на обслуживание энергосистем" },
                 new KBSTViewModel(){ ShortName = "КБСТ", Title = "Заявки на 3D модели" }
             };
+
+            UpdateDataGrid = new UpdateDataGrid(this);
         }
+
         public BaseViewModel SelectedViewModel
         {
             get => _selectedViewModel;
@@ -30,5 +35,9 @@ namespace DepartmentsRequests.ViewModels
                 OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
+
+        public ICommand UpdateDataGrid { get; set; }
+
+        public bool IsShowAllRequests { get; set; }
     }
 }
