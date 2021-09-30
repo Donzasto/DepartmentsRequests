@@ -9,7 +9,10 @@ namespace DepartmentsRequests.ViewModels
     {
         private BaseViewModel _selectedViewModel;
 
+        public ICommand UpdateDataGrid { get; set; }
+        public ICommand OpenRequestWindow { get; set; }
         public List<BaseViewModel> ViewModelsList { get; }
+        public bool IsShowAllRequests { get; set; }
 
         public MainWindowViewModel()
         {
@@ -17,13 +20,14 @@ namespace DepartmentsRequests.ViewModels
 
             ViewModelsList = new List<BaseViewModel>()
             {
-                new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования", OGMehRequestsDataGrid = db.OGMehRequestsList },
-                new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы", BPURequestsDataGrid = db.BPURequestsList },
+                new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования" },
+                new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы" },
                 new ETsViewModel(){ ShortName = "ЭЦ", Title = "Заявки на обслуживание энергосистем" },
                 new KBSTViewModel(){ ShortName = "КБСТ", Title = "Заявки на 3D модели" }
             };
 
             UpdateDataGrid = new UpdateDataGrid(this);
+            OpenRequestWindow = new OpenRequestWindow();
         }
 
         public BaseViewModel SelectedViewModel
@@ -32,12 +36,9 @@ namespace DepartmentsRequests.ViewModels
             set
             {
                 _selectedViewModel = value;
+                UpdateDataGrid.Execute(null);
                 OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
-
-        public ICommand UpdateDataGrid { get; set; }
-
-        public bool IsShowAllRequests { get; set; }
     }
 }

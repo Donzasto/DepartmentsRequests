@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DepartmentsRequests.ViewModels
 {
@@ -6,7 +7,7 @@ namespace DepartmentsRequests.ViewModels
     {
         public string Title { get; set; }
         public string ShortName { get; set; }
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)

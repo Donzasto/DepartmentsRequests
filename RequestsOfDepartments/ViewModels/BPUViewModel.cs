@@ -5,6 +5,16 @@ namespace DepartmentsRequests.ViewModels
 {
     public class BPUViewModel : BaseViewModel
     {
-        public List<BPURequestModel> BPURequestsDataGrid { get; set; }
+        private List<BPURequestModel> _bPURequestModel;
+
+        public List<BPURequestModel> BPURequestsDataGrid
+        {
+            get => _bPURequestModel;
+            set
+            {
+                _bPURequestModel = value;
+                OnPropertyChanged(nameof(BPURequestsDataGrid));
+            }
+        }
     }
 }

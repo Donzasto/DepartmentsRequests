@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DepartmentsRequests.Models
 {
+    [Table("RequestsBPU")]
     public class BPURequestModel
     {
         public int Id { get; set; }

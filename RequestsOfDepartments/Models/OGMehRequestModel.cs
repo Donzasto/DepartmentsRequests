@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DepartmentsRequests.Models
 {
+    [Table("RequestsOGMeh")]
     public class OGMehRequestModel
     {
         public int Id { get; set; }

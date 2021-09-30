@@ -1,13 +1,13 @@
-﻿using DepartmentsRequests.DAL;
-using DepartmentsRequests.ViewModels;
-using System;
+﻿using System;
 using System.Windows.Input;
+using DepartmentsRequests.DAL;
+using DepartmentsRequests.ViewModels;
 
 namespace DepartmentsRequests.Commands
 {
     internal class UpdateDataGrid : ICommand
     {
-        private MainWindowViewModel _mainWindowViewModel;
+        private readonly MainWindowViewModel _mainWindowViewModel;
 
         public UpdateDataGrid(MainWindowViewModel mainWindowViewModel)
         {
@@ -25,14 +25,13 @@ namespace DepartmentsRequests.Commands
         {
             using DepartmentsRequestsContext db = new();
 
-            if (_mainWindowViewModel.IsShowAllRequests)
+            if (_mainWindowViewModel.SelectedViewModel is OGMehViewModel oGMehViewModel)
             {
-                ((OGMehViewModel)_mainWindowViewModel.ViewModelsList[0]).OGMehRequestsDataGrid = db.OGMehOpenRequestsList;
-            //    ((OGMehViewModel)_mainWindowViewModel.SelectedViewModel).OGMehRequestsDataGrid = db.OGMehOpenRequestsList;
+                oGMehViewModel.OGMehRequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? db.OGMehAllRequestsList : db.OGMehOpenRequestsList;
             }
-            else
+            else if (_mainWindowViewModel.SelectedViewModel is BPUViewModel bPUViewModel)
             {
-                ((OGMehViewModel)_mainWindowViewModel.ViewModelsList[0]).OGMehRequestsDataGrid = db.OGMehRequestsList;
+                bPUViewModel.BPURequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? db.BPUAllRequestsList : db.BPUOpenRequestsList;
             }
         }
     }
