@@ -23,15 +23,15 @@ namespace DepartmentsRequests.Commands
 
         public void Execute(object parameter)
         {
-            using DepartmentsRequestsContext db = new();
+            using DepartmentsRequestsContext departmentsRequestsContext = new();
 
             if (_mainWindowViewModel.SelectedViewModel is OGMehViewModel oGMehViewModel)
             {
-                oGMehViewModel.OGMehRequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? db.OGMehAllRequestsList : db.OGMehOpenRequestsList;
+                oGMehViewModel.OGMehRequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? departmentsRequestsContext.OGMehAllRequestsList : departmentsRequestsContext.OGMehOpenRequestsList;
             }
             else if (_mainWindowViewModel.SelectedViewModel is BPUViewModel bPUViewModel)
             {
-                bPUViewModel.BPURequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? db.BPUAllRequestsList : db.BPUOpenRequestsList;
+                bPUViewModel.BPURequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? departmentsRequestsContext.BPUAllRequestsList : departmentsRequestsContext.BPUOpenRequestsList;
             }
         }
     }

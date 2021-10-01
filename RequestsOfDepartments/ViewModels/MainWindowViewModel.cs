@@ -1,24 +1,21 @@
 ﻿using DepartmentsRequests.Commands;
-using DepartmentsRequests.DAL;
 using System.Collections.Generic;
 using System.Windows.Input;
 
 namespace DepartmentsRequests.ViewModels
 {
-    public class MainWindowViewModel : BaseViewModel
+    public class MainWindowViewModel : DepartmentViewModel
     {
-        private BaseViewModel _selectedViewModel;
+        private DepartmentViewModel _selectedViewModel;
 
         public ICommand UpdateDataGrid { get; set; }
         public ICommand OpenRequestWindow { get; set; }
-        public List<BaseViewModel> ViewModelsList { get; }
+        public List<DepartmentViewModel> ViewModelsList { get; }
         public bool IsShowAllRequests { get; set; }
 
         public MainWindowViewModel()
         {
-            using DepartmentsRequestsContext db = new();
-
-            ViewModelsList = new List<BaseViewModel>()
+            ViewModelsList = new List<DepartmentViewModel>()
             {
                 new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования" },
                 new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы" },
@@ -30,7 +27,7 @@ namespace DepartmentsRequests.ViewModels
             OpenRequestWindow = new OpenRequestWindow();
         }
 
-        public BaseViewModel SelectedViewModel
+        public DepartmentViewModel SelectedViewModel
         {
             get => _selectedViewModel;
             set

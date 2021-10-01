@@ -1,6 +1,6 @@
 ﻿namespace DepartmentsRequests.ViewModels
 {
-    public class KBSTViewModel : BaseViewModel
+    public class KBSTViewModel : DepartmentViewModel
     {
 
     }

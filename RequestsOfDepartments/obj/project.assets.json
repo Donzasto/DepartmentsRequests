@@ -5702,19 +5702,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Main\\.nuget\\packages\\": {}
+    "C:\\Users\\MardirosovAA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
+      "projectUniqueName": "C:\\Users\\MardirosovAA\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
       "projectName": "DepartmentsRequests",
-      "projectPath": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
-      "packagesPath": "C:\\Users\\Main\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Main\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\obj\\",
+      "projectPath": "C:\\Users\\MardirosovAA\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\DepartmentsRequests.csproj",
+      "packagesPath": "C:\\Users\\MardirosovAA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MardirosovAA\\Desktop\\DepartmentsRequests\\RequestsOfDepartments\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Main\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MardirosovAA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

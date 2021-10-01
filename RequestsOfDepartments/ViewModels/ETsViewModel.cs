@@ -1,6 +1,6 @@
 ﻿namespace DepartmentsRequests.ViewModels
 {
-    public class ETsViewModel : BaseViewModel
+    public class ETsViewModel : DepartmentViewModel
     {
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DepartmentsRequests.ViewModels
 {
-    public class OGMehViewModel : BaseViewModel
+    public class OGMehViewModel : DepartmentViewModel
     {
         private List<OGMehRequestModel> _oGMehRequestModel;
 

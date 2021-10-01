@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DepartmentsRequests.ViewModels
 {
-    public class BPUViewModel : BaseViewModel
+    public class BPUViewModel : DepartmentViewModel
     {
         private List<BPURequestModel> _bPURequestModel;
 

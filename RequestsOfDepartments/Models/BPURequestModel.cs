@@ -12,7 +12,7 @@ namespace DepartmentsRequests.Models
         public string FullNameSender { get; set; }
         public string PhoneSender { get; set; }
         public string Order { get; set; }
-        public DateTime DateSended { get; set; }
+        public DateTime? DateSended { get; set; }
         public string FullNameImplementation { get; set; }
         public DateTime? DatePlan { get; set; }
         public DateTime? DateReceived { get; set; }
