@@ -3,74 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:sys="clr-namespace:System;assembly=mscorlib"
-		xmlns:viewmodals="clr-namespace:DepartmentsRequests.ViewModels"
         mc:Ignorable="d"
         Title="Заявка" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
-	<Window.DataContext>
-		<viewmodals:RequestViewModel />
-	</Window.DataContext>
-	<Window.Resources>
-		<Style TargetType="Label">
-			<Setter Property="FontSize" Value="14" />
-			<Setter Property="HorizontalAlignment" Value="Right" />
-		</Style>
-		<Style TargetType="ComboBox">
-			<Setter Property="Margin" Value="5" />
-			<Setter Property="HorizontalAlignment" Value="Left" />
-		</Style>
-		<Style TargetType="TextBox">
-			<Setter Property="Margin" Value="5" />
-			<Setter Property="HorizontalAlignment" Value="Left" />
-		</Style>
-		<Style TargetType="DatePicker">
-			<Setter Property="Margin" Value="5, 3" />
-			<Setter Property="HorizontalAlignment" Value="Left" />
-		</Style>
-		<Style TargetType="Button">
-			<Setter Property="Margin" Value="5" />
-		</Style>
-	</Window.Resources>
 	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="60"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="250"></ColumnDefinition>
-			<ColumnDefinition Width="300"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Label Grid.Column="0" Grid.Row="0" Content="Подразделение"/>
-		<ComboBox Grid.Column="1" Grid.Row="0" Width="60" ItemsSource="{Binding DepartmentsList}" SelectedValue="{Binding Department}"/>
-		<Label Grid.Column="0" Grid.Row="1"  Content="Оборудование"/>
-		<ComboBox Grid.Column="1" Grid.Row="1"  Width="290" ItemsSource="{Binding EquipmentList}" SelectedValue="{Binding Equipment}"  DisplayMemberPath="Name"/>
-		<Label Grid.Column="0" Grid.Row="2" Content="Подающий заявку / Тел. / Почта"/>
-		<StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-			<ComboBox Width="120" ItemsSource="{Binding FullNameSendersList}" SelectedValue="{Binding FullNameSender}"/>
-			<TextBox Width="50" Text="{Binding PhoneSender}"/>
-			<TextBox Width="100" Text="{Binding MailSender}"/>
-		</StackPanel>
-		<Label Grid.Column="0" Grid.Row="3" Content="Требуемый специалист"/>
-		<ComboBox Grid.Column="1" Grid.Row="3" Width="120">
-			<TextBlock>Слесарь</TextBlock>
-			<TextBlock>Электрик</TextBlock>
-			<TextBlock>Электронщик</TextBlock>
-		</ComboBox>
-		<Label Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Content="Описание поломки"/>
-		<TextBox Grid.Column="1" Grid.Row="4" Width="290" Height="50" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="500" Text="{Binding Description}"/>
-		<Label Grid.Column="0" Grid.Row="5" Content="Номер заказа"/>
-		<TextBox Grid.Column="1" Grid.Row="5" Width="120" Text="{Binding Order}"/>
-		<Label Grid.Column="0" Grid.Row="6" Content="Работавший на оборудовании"/>
-		<ComboBox Grid.Column="1" Grid.Row="6" Width="120" ItemsSource="{Binding FullNameOperatorsList}"/>
-		<Label Grid.Column="0" Grid.Row="7" Content="Дата предоставления оборудования"/>
-		<DatePicker Grid.Column="1" Grid.Row="7" Width="120" SelectedDate="{x:Static sys:DateTime.Now}"/>
-		<Button Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" Content="Отправить" Command="{Binding AddRequest}"></Button>
+		<ContentControl/>
 	</Grid>
 </Window>

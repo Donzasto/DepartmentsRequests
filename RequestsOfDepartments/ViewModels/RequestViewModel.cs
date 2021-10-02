@@ -36,7 +36,7 @@ namespace DepartmentsRequests.ViewModels
 
             DepartmentsList = departmentsRequestsContext.DepartmentsList;
 
-            AddRequest = new AddRequest(this);
+            AddRequest = new AddRequestCommand(this);
         }
     }
 }

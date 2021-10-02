@@ -3,14 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DepartmentsRequests.ViewModels"
+        xmlns:viewmodals="clr-namespace:DepartmentsRequests.ViewModels"
         mc:Ignorable="d"
         Title="{Binding SelectedViewModel.Title}" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-
 	<Window.DataContext>
-		<local:MainWindowViewModel />
+		<viewmodals:MainWindowViewModel />
 	</Window.DataContext>
-
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition></RowDefinition>
@@ -19,15 +17,12 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-
 		<ContentControl Grid.ColumnSpan="1" Grid.RowSpan="1" Content="{Binding SelectedViewModel}"/>
-
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" MinWidth="100" Grid.Row="1">
 			<TextBlock Margin="5" VerticalAlignment="Center"  Height="35"><Run Text="Показ"/><Run Language="ru-ru" Text="ыв"/><Run Text="ать"/><LineBreak/><Run Text="закрытые"/></TextBlock>
 			<CheckBox Margin="5" VerticalAlignment="Center" IsChecked="{Binding IsShowAllRequests}" Command="{Binding UpdateDataGrid}"/>
 			<Button Margin="5" Width="90" FontWeight="Bold" FontSize="14" Command="{Binding UpdateDataGrid}">ОБНОВИТЬ</Button>
 		</StackPanel>
-
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" MinWidth="100" Grid.Row="1">
 			<ComboBox Margin="5" Width="100" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" ItemsSource="{Binding ViewModelsList}" SelectedValue="{Binding SelectedViewModel}" DisplayMemberPath="ShortName"/>
 			<Button  Margin="5" Width="110" FontWeight="Bold" FontSize="14" Command="{Binding OpenRequestWindow}">Подать заявку</Button>

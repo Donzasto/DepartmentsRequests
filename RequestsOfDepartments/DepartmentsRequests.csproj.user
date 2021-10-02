@@ -10,12 +10,18 @@
     <Compile Update="Views\RequestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserControls\Requests\Send\OGMehSendRequestUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RequestWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserControls\Requests\Send\OGMehSendRequestUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

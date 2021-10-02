@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MardirosovAA\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\
+C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\
 DepartmentsRequests
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\MardirosovAA\Desktop\DepartmentsRequests\RequestsOfDepartments\App.xaml
-6-2105545861
+C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\App.xaml
+7-388293918
 
-251311742544
-215-204240937
-MainWindow.xaml;Views\BPUUserControl.xaml;Views\ETsUserControl.xaml;Views\KBSTUserControl.xaml;Views\OGMehUserControl.xaml;Views\RequestWindow.xaml;
+26-206760321
+215-1114060190
+MainWindow.xaml;Views\RequestWindow.xaml;Views\UserControls\DataGrids\BPUDataGridUserControl.xaml;Views\UserControls\DataGrids\ETsDataGridUserControl.xaml;Views\UserControls\DataGrids\KBSTDataGridUserControl.xaml;Views\UserControls\DataGrids\OGMehDataGridUserControl.xaml;Views\UserControls\Requests\Send\OGMehSendRequestUserControl.xaml;
 
 False
 

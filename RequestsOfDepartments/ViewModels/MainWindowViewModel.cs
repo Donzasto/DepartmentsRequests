@@ -23,8 +23,8 @@ namespace DepartmentsRequests.ViewModels
                 new KBSTViewModel(){ ShortName = "КБСТ", Title = "Заявки на 3D модели" }
             };
 
-            UpdateDataGrid = new UpdateDataGrid(this);
-            OpenRequestWindow = new OpenRequestWindow();
+            UpdateDataGrid = new UpdateDataGridCommand(this);
+            OpenRequestWindow = new OpenRequestWindowCommand();
         }
 
         public DepartmentViewModel SelectedViewModel
