@@ -1,21 +1,35 @@
 ﻿<Application x:Class="DepartmentsRequests.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 xmlns:userControlsDataGrids="clr-namespace:DepartmentsRequests.Views.UserControls.DataGrids"
-			 xmlns:viewmodels="clr-namespace:DepartmentsRequests.ViewModels"
+			 xmlns:usercontrolsDataGrids="clr-namespace:DepartmentsRequests.Views.UserControls.DataGrids"
+			 xmlns:usercontrolsRequest="clr-namespace:DepartmentsRequests.Views.UserControls.Requests.Send"
+			 xmlns:viewmodelsMain="clr-namespace:DepartmentsRequests.ViewModels.MainWindow"
+			 xmlns:viewmodelsRequest="clr-namespace:DepartmentsRequests.ViewModels.RequestWindow"
              StartupUri="MainWindow.xaml">
 	<Application.Resources>
-		<DataTemplate DataType="{x:Type viewmodels:OGMehViewModel}">
-			<userControlsDataGrids:OGMehDataGridUserControl/>
+		<DataTemplate DataType="{x:Type viewmodelsMain:OGMehViewModel}">
+			<usercontrolsDataGrids:OGMehDataGridUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:BPUViewModel}">
-			<userControlsDataGrids:BPUDataGridUserControl/>
+		<DataTemplate DataType="{x:Type viewmodelsMain:BPUViewModel}">
+			<usercontrolsDataGrids:BPUDataGridUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:ETsViewModel}">
-			<userControlsDataGrids:ETsDataGridUserControl/>
+		<DataTemplate DataType="{x:Type viewmodelsMain:ETsViewModel}">
+			<usercontrolsDataGrids:ETsDataGridUserControl/>
 		</DataTemplate>
-		<DataTemplate DataType="{x:Type viewmodels:KBSTViewModel}">
-			<userControlsDataGrids:KBSTDataGridUserControl/>
+		<DataTemplate DataType="{x:Type viewmodelsMain:KBSTViewModel}">
+			<usercontrolsDataGrids:KBSTDataGridUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodelsRequest:OGMehRequestViewModel}">
+			<usercontrolsRequest:OGMehSendRequestUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodelsRequest:BPURequestViewModel}">
+			<usercontrolsRequest:BPUSendRequestUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodelsRequest:ETsRequestViewModel}">
+			<usercontrolsRequest:ETsSendRequestUserControl/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodelsRequest:KBSTRequestViewModel}">
+			<usercontrolsRequest:KBSTSendRequestUserControl/>
 		</DataTemplate>
 	</Application.Resources>
 </Application>

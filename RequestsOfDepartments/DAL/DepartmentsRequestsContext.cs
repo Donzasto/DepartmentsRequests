@@ -17,13 +17,14 @@ namespace DepartmentsRequests.DAL
         public DbSet<EquipmentModel> Equipment { get; set; }
         public DbSet<UserModel> User { get; set; }
 
-        public List<int> DepartmentsList => User.Select(s => s.Department).Distinct().ToList();
+    //    public List<int> DepartmentsList => User.Select(s => s.Department).Distinct().ToList();
+        public List<int> DepartmentsList => new List<int>();
         public List<EquipmentModel> EquipmentList => Equipment.OrderByDescending(o => o.Id).ToList();
 
         // ОГМех.
     //    public List<OGMehRequestModel> OGMehOpenRequestsList => RequestsOGMeh.Where(w => w.DateClosed == null).OrderByDescending(o => o.Id).ToList();
-        public List<OGMehRequestModel> OGMehAllRequestsList => RequestsOGMeh.OrderByDescending(o => o.Id).ToList();
         public List<OGMehRequestModel> OGMehOpenRequestsList => new List<OGMehRequestModel>();
+        public List<OGMehRequestModel> OGMehAllRequestsList => RequestsOGMeh.OrderByDescending(o => o.Id).ToList();
 
         // БПУ.
         public List<BPURequestModel> BPUOpenRequestsList => RequestsBPU.Where(w => w.DateClosed == null).OrderByDescending(o => o.Id).ToList();

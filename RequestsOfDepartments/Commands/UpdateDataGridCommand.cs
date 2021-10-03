@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using DepartmentsRequests.DAL;
-using DepartmentsRequests.ViewModels;
+using DepartmentsRequests.ViewModels.MainWindow;
 
 namespace DepartmentsRequests.Commands
 {
@@ -27,11 +27,11 @@ namespace DepartmentsRequests.Commands
 
             if (_mainWindowViewModel.SelectedViewModel is OGMehViewModel oGMehViewModel)
             {
-                oGMehViewModel.OGMehRequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? departmentsRequestsContext.OGMehAllRequestsList : departmentsRequestsContext.OGMehOpenRequestsList;
+                oGMehViewModel.OGMehDataGrid = _mainWindowViewModel.ShowAllRequests ? departmentsRequestsContext.OGMehAllRequestsList : departmentsRequestsContext.OGMehOpenRequestsList;
             }
             else if (_mainWindowViewModel.SelectedViewModel is BPUViewModel bPUViewModel)
             {
-                bPUViewModel.BPURequestsDataGrid = _mainWindowViewModel.IsShowAllRequests ? departmentsRequestsContext.BPUAllRequestsList : departmentsRequestsContext.BPUOpenRequestsList;
+                bPUViewModel.BPUDataGrid = _mainWindowViewModel.ShowAllRequests ? departmentsRequestsContext.BPUAllRequestsList : departmentsRequestsContext.BPUOpenRequestsList;
             }
         }
     }

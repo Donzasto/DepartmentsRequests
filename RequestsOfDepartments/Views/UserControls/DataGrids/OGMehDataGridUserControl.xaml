@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-		<DataGrid AutoGenerateColumns="False" ItemsSource="{Binding OGMehRequestsDataGrid}">
+		<DataGrid AutoGenerateColumns="False" ItemsSource="{Binding OGMehDataGrid}">
 			<DataGrid.Columns>
 				<DataGridTextColumn Binding="{Binding Id}" Header="№"></DataGridTextColumn>
 				<DataGridTextColumn Binding="{Binding Equipment}" Header="Обрудование"></DataGridTextColumn>

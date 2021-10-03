@@ -1,6 +1,6 @@
 ﻿using DepartmentsRequests.DAL;
 using DepartmentsRequests.Models;
-using DepartmentsRequests.ViewModels;
+using DepartmentsRequests.ViewModels.RequestWindow;
 using System;
 using System.Windows.Input;
 
