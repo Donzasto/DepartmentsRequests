@@ -4,14 +4,9 @@ using System.Windows.Input;
 
 namespace DepartmentsRequests.ViewModels.MainWindow
 {
-    public class MainWindowViewModel : DepartmentViewModel
+    public class MainWindowViewModel : BaseViewModel
     {
         private DepartmentViewModel _selectedViewModel;
-
-        public ICommand UpdateDataGrid { get; set; }
-        public ICommand OpenRequestWindow { get; set; }
-        public List<DepartmentViewModel> ViewModelsList { get; }
-        public bool ShowAllRequests { get; set; }
 
         public MainWindowViewModel()
         {
@@ -26,6 +21,11 @@ namespace DepartmentsRequests.ViewModels.MainWindow
             UpdateDataGrid = new UpdateDataGridCommand(this);
             OpenRequestWindow = new OpenRequestWindowCommand();
         }
+
+        public ICommand UpdateDataGrid { get; set; }
+        public ICommand OpenRequestWindow { get; set; }
+        public List<DepartmentViewModel> ViewModelsList { get; }
+        public bool ShowAllRequests { get; set; }
 
         public DepartmentViewModel SelectedViewModel
         {

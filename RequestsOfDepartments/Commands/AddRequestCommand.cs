@@ -8,9 +8,9 @@ namespace DepartmentsRequests.Commands
 {
     internal class AddRequestCommand : ICommand
     {
-        private readonly RequestViewModel _requestViewModel;
+        private readonly RequestWindowViewModel _requestViewModel;
 
-        public AddRequestCommand(RequestViewModel requestViewModel)
+        public AddRequestCommand(RequestWindowViewModel requestViewModel)
         {
             _requestViewModel = requestViewModel;
         }

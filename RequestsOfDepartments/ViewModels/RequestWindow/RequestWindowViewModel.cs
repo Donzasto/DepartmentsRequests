@@ -7,8 +7,17 @@ using DepartmentsRequests.Models;
 
 namespace DepartmentsRequests.ViewModels.RequestWindow
 {
-    public class RequestViewModel
+    public class RequestWindowViewModel
     {
+        public RequestWindowViewModel()
+        {
+            using DepartmentsRequestsContext departmentsRequestsContext = new();
+
+            DepartmentsList = departmentsRequestsContext.DepartmentsList;
+
+            AddRequest = new AddRequestCommand(this);
+        }
+
         public ICommand AddRequest { get; set; }
         public List<int> DepartmentsList { get; }
         public List<EquipmentModel> EquipmentList { get; }
@@ -24,15 +33,6 @@ namespace DepartmentsRequests.ViewModels.RequestWindow
         public string Description { get; set; }
         public string FullNameOperator { get; set; }
         public DateTime? DateProvide { get; set; }
-
-        public RequestViewModel()
-        {
-            using DepartmentsRequestsContext departmentsRequestsContext = new();
-
-            DepartmentsList = departmentsRequestsContext.DepartmentsList;
-
-            AddRequest = new AddRequestCommand(this);
-        }
 
         public OGMehRequestViewModel SelectedViewModel { get; set; } = new OGMehRequestViewModel();
     }

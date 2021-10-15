@@ -18,7 +18,7 @@ namespace DepartmentsRequests.DAL
         public DbSet<UserModel> User { get; set; }
 
     //    public List<int> DepartmentsList => User.Select(s => s.Department).Distinct().ToList();
-        public List<int> DepartmentsList => new List<int>();
+        public List<int> DepartmentsList => new List<int>() { 4, 5 };
         public List<EquipmentModel> EquipmentList => Equipment.OrderByDescending(o => o.Id).ToList();
 
         // ОГМех.
@@ -27,7 +27,8 @@ namespace DepartmentsRequests.DAL
         public List<OGMehRequestModel> OGMehAllRequestsList => RequestsOGMeh.OrderByDescending(o => o.Id).ToList();
 
         // БПУ.
-        public List<BPURequestModel> BPUOpenRequestsList => RequestsBPU.Where(w => w.DateClosed == null).OrderByDescending(o => o.Id).ToList();
+        //    public List<BPURequestModel> BPUOpenRequestsList => RequestsBPU.Where(w => w.DateClosed == null).OrderByDescending(o => o.Id).ToList();
+        public List<BPURequestModel> BPUOpenRequestsList => new List<BPURequestModel>();
         public List<BPURequestModel> BPUAllRequestsList => RequestsBPU.OrderByDescending(o => o.Id).ToList();
     }
 }

@@ -204,4 +204,4 @@ C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0
 C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\Views\UserControls\Requests\Send\BPUSendRequestUserControl.baml
 C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\Views\UserControls\Requests\Send\ETsSendRequestUserControl.baml
 C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\Views\UserControls\Requests\Send\KBSTSendRequestUserControl.baml
-C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\DepartmentsRequests.csproj.CopyComplete
+C:\Users\Main\Desktop\DepartmentsRequests\RequestsOfDepartments\obj\Debug\net6.0-windows7.0\DepartmentsRequests.csproj.AssemblyReference.cache
