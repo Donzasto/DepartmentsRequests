@@ -1,6 +1,7 @@
-﻿using DepartmentsRequests.Commands;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
+using DepartmentsRequests.Commands;
+using DepartmentsRequests.ViewModels.RequestWindow;
 
 namespace DepartmentsRequests.ViewModels.MainWindow
 {
@@ -12,14 +13,14 @@ namespace DepartmentsRequests.ViewModels.MainWindow
         {
             ViewModelsList = new List<DepartmentViewModel>()
             {
-                new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования" },
-                new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы" },
+                new OGMehViewModel(){ ShortName = "ОГМех", Title = "Заявки на ремонт оборудования", CurrentRequestViewModel = new OGMehRequestViewModel() },
+                new BPUViewModel(){ ShortName = "БПУ", Title =  "Заявки на управлющие программы", CurrentRequestViewModel = new BPURequestViewModel() },
                 new ETsViewModel(){ ShortName = "ЭЦ", Title = "Заявки на обслуживание энергосистем" },
                 new KBSTViewModel(){ ShortName = "КБСТ", Title = "Заявки на 3D модели" }
             };
 
             UpdateDataGrid = new UpdateDataGridCommand(this);
-            OpenRequestWindow = new OpenRequestWindowCommand();
+            OpenRequestWindow = new OpenRequestWindowCommand(this);
         }
 
         public ICommand UpdateDataGrid { get; set; }

@@ -11,11 +11,18 @@ namespace DepartmentsRequests.ViewModels.RequestWindow
     {
         public RequestWindowViewModel()
         {
+            
+        }
+
+        public RequestWindowViewModel(RequestViewModel currentRequestViewModel)
+        {
             using DepartmentsRequestsContext departmentsRequestsContext = new();
 
             DepartmentsList = departmentsRequestsContext.DepartmentsList;
 
             AddRequest = new AddRequestCommand(this);
+
+            SelectedViewModel = currentRequestViewModel;
         }
 
         public ICommand AddRequest { get; set; }
@@ -34,6 +41,6 @@ namespace DepartmentsRequests.ViewModels.RequestWindow
         public string FullNameOperator { get; set; }
         public DateTime? DateProvide { get; set; }
 
-        public OGMehRequestViewModel SelectedViewModel { get; set; } = new OGMehRequestViewModel();
+        public RequestViewModel SelectedViewModel { get; init; }
     }
 }

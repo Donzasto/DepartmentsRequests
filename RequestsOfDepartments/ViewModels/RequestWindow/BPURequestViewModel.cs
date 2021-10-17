@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DepartmentsRequests.ViewModels.RequestWindow
 {
-    internal class BPURequestViewModel
+    internal class BPURequestViewModel : RequestViewModel
     {
     }
 }

@@ -6,9 +6,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Заявка" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
-	<Window.DataContext>
-		<viewmodals:RequestWindowViewModel/>
-	</Window.DataContext>
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition></RowDefinition>

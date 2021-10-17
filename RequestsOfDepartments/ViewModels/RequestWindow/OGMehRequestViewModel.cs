@@ -1,6 +1,6 @@
 ﻿namespace DepartmentsRequests.ViewModels.RequestWindow
 {
-    public class OGMehRequestViewModel
+    internal class OGMehRequestViewModel : RequestViewModel
     {
     }
 }

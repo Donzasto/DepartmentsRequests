@@ -1,11 +1,19 @@
-﻿using DepartmentsRequests.Views;
-using System;
+﻿using System;
 using System.Windows.Input;
+using DepartmentsRequests.ViewModels.MainWindow;
+using DepartmentsRequests.Views;
 
 namespace DepartmentsRequests.Commands
 {
     internal class OpenRequestWindowCommand : ICommand
     {
+        private MainWindowViewModel _currentRequestViewModel;
+
+        public OpenRequestWindowCommand(MainWindowViewModel currentRequestViewModel)
+        {
+            _currentRequestViewModel = currentRequestViewModel;
+        }
+
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
@@ -15,7 +23,7 @@ namespace DepartmentsRequests.Commands
 
         public void Execute(object parameter)
         {
-            new RequestWindow().ShowDialog();
+            new RequestWindow(_currentRequestViewModel.SelectedViewModel.CurrentRequestViewModel).ShowDialog();
         }
     }
 }
